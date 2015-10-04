@@ -64,6 +64,13 @@ def SpaceFreeFormat(command):   # Callback when command is spoken.
         printer = Text(someString.replace(' ', '').lower())
         printer.execute() 
 
+# Voice command rule for "Normal text" naming convention.
+def NormalTextFormat(command):   # Callback when command is spoken.
+        textToPrint = command
+        someString = str(textToPrint)
+        printer = Text(someString)
+        printer.execute() 
+
 
 class ProgrammingNamingConventions(MappingRule):
 
@@ -102,6 +109,9 @@ class ProgrammingNamingConventions(MappingRule):
                   "space free <command>":                 Function(SpaceFreeFormat),
                   "space free <command> <symbol>":             Function(SpaceFreeFormat) + Text("%(symbol)s"),
                   "<symbol> space free <command>":              Text("%(symbol)s") + Function(SpaceFreeFormat),
+
+                  # example of this command: Test value
+                  "normal text <command>":                 Function(NormalTextFormat),
                }
     
     extras   = [
