@@ -33,7 +33,7 @@ class CPPControlStructures(MappingRule):
     
     mapping  = {
                     "code block":           Text("{") + Key("enter")+ Key("enter") + Text("}"),
-                    "if":                   Text("if()") + Key("enter")+ Key("enter") + Text("}"),
+                    "if":                   Text("if() {") + Key("enter")+ Key("enter") + Text("}"),
                     "if else":              Text("if() {") + Key("enter")+ Key("enter") + Text("}") + Key("enter") + Text("else {") + Key("enter")+ Key("enter") + Text("}"),
                     "else if":              Text("else if() {") + Key("enter")+ Key("enter") + Text("}"),
                     "while loop":           Text("while() {") + Key("enter")+ Key("enter") + Text("}"),
