@@ -7,3 +7,6 @@ I originally tried caster. But DNS took too long when I was using it.
 
 These files are intended to be copied directly into the
 C:\NatLink\NatLink\MacroSystem\ directory.
+
+    cp *.py /c/NatLink/NatLink/MacroSystem/
+
