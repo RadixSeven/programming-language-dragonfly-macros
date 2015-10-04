@@ -4,3 +4,6 @@ forked from (by Brandon Lovrien) and have modified them to suit my own
 purposes.
 
 I originally tried caster. But DNS took too long when I was using it.
+
+These files are intended to be copied directly into the
+C:\NatLink\NatLink\MacroSystem\ directory.
