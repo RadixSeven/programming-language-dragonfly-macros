@@ -39,7 +39,7 @@ def camel_format(command):   # Callback when command is spoken.
 def middle_underscores(command):   # Callback when command is spoken.
         textToPrint = command
         someString = str(textToPrint)
-        printer = Text(someString.replace(' ', '_'))
+        printer = Text(someString.replace(' ', '_').lower())
         printer.execute()
 
 # Voice command rule for "_BEGINNING_UNDERSCORES" naming convention.
@@ -54,15 +54,16 @@ def _BEGINNING_UNDERSCORES(command):   # Callback when command is spoken.
 def middle_slash_format(command):   # Callback when command is spoken.
         textToPrint = command
         someString = str(textToPrint)
-        printer = Text(someString.replace(' ', '-'))
+        printer = Text(someString.replace(' ', '-').lower())
         printer.execute()
 
 # Voice command rule for "spacefree" naming convention.
 def SpaceFreeFormat(command):   # Callback when command is spoken.
         textToPrint = command
         someString = str(textToPrint)
-        printer = Text(someString.replace(' ', ''))
+        printer = Text(someString.replace(' ', '').lower())
         printer.execute() 
+
 
 class ProgrammingNamingConventions(MappingRule):
 
