@@ -150,18 +150,9 @@ class CPPDataTypes(MappingRule):
                 "wide character":           Text("wchar_t "),
                 "short":                    Text("short "),
                 "constant":                 Text("const "),
-                "null":                     Text("NULL"),
-
-                #my attempt at a C++ script for shortcut float notation                
-                "<n> point <n2> float":                Text("%(n)d.%(n2)d") + Text("f"),
-                "<n> point <n2> <n3> float":                Text("%(n)d.%(n2)d%(n3)d") + Text("f"),
-                "<n> point <n2> <n3> <n4> float":                Text("%(n)d.%(n2)d%(n3)d%(n4)d") + Text("f"),
+                "null pointer":             Text("nullptr"),
                 }
     extras   = [
-                Integer("n", -1000, 1000),
-                Integer("n2", 0, 1000),
-                Integer("n3", 0, 1000),
-                Integer("n4", 0, 1000)
                 ]
 
 class CPPEscapeSequences(MappingRule):
